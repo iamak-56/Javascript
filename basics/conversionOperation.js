@@ -28,7 +28,11 @@ let stringNumber = String(someNumber)
 console.log(stringNumber);
 console.log(typeof stringNumber)
 
+<<<<<<< HEAD
 / ********************** Operations ****************//
+=======
+// ********************** Operations ****************//
+>>>>>>> 1000993 (conversionOperation.js)
 
 let value = 3
 let negValue = -value
@@ -63,3 +67,14 @@ console.log(+"");
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 1000993 (conversionOperation.js)
