@@ -28,8 +28,8 @@ const obj2 = { 3: "a", 4: "b" };
 const obj4 = { 5: "a", 6: "b" };
 
 // Combine obj1 and obj2 into obj3
-// const obj3 = { obj1, obj2 }; // This creates a nested object, not a flat merged object.
-// const obj3 = Object.assign({}, obj1, obj2, obj4); // This merges all properties into a new object, overwriting the previous obj3 definition.
+const obj3 = { obj1, obj2 }; // This creates a nested object, not a flat merged object.
+const obj3 = Object.assign({}, obj1, obj2, obj4); // This merges all properties into a new object, overwriting the previous obj3 definition.
 const obj3 = { ...obj1, ...obj2 }; // This will merge obj1 and obj2, overwriting the previous obj3 definition again.
 
 console.log(obj3); // Output: { 1: 'a', 2: 'b', 3: 'a', 4: 'b' }
@@ -102,3 +102,56 @@ console.log(InstagramUser.hasOwnProperty("islogged")); // Output: false
 // Properties can be accessed and modified using dot notation.
 // Objects can be merged using 'Object.assign()' or the spread operator (...).
 // Careful attention is needed to syntax, especially when creating objects with multiple entries.
+
+
+
+// Define an object with course details
+const course = {
+  coursename: "Js in Hindi",    // Course name
+  price: "999",                 // Course price
+  coursseInstructor: "Akhshan"  // Instructor's name (Note: Typo in 'coursseInstructor')
+}
+
+// Accessing the course instructor's name directly from the object
+console.log(course.coursseInstructor); // Outputs: "Akhshan"
+
+// Destructuring to extract the instructor's name with an alias 'instructor'
+const { coursseInstructor: instructor } = course;
+
+// Attempting to log 'coursseInstructor' directly will result in an error because it's misspelled.
+console.log(coursseInstructor); // This will throw a ReferenceError
+
+// Logging the correct instructor variable after destructuring
+console.log(instructor); // Outputs: "Akhshan"
+
+// JSON-like object (needs proper formatting)
+const courseInfo = {
+  "name": "Akhshan",
+  "coursename": "Js in Hindi",
+  "Price": "Free"
+};
+
+//  JSON un-like Object improper formatting
+{
+  "name": "Akhshan"
+  "coursename": "Js in Hindi"
+  "Price": "Free"
+}
+
+// Example of an array of empty objects (not doing much in this context)
+const emptyArray = [
+  {},
+  {},
+  {},
+];
+
+console.log(courseInfo); // Logs the course information
+console.log(emptyArray); // Logs the array of empty objects
+
+//  ******************* Key Points *********************** //
+
+// Key Points:
+// Typo:-- There's a typo in the key name 'coursseInstructor' in the object. Make sure it's consistent when accessing the property or using it in destructuring.
+// Error Explanation:-- 'console.log(coursseInstructor);' will throw an error because 'coursseInstructor' is not defined in the global scope; it’s a property inside the 'course' object.
+// JSON Formatting:-- The JSON object should have properly formatted keys and values.
+// This summary and commented code should help clarify what's happening!
