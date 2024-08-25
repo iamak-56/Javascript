@@ -52,3 +52,62 @@ function sayMyName() {
 // The 'sayMyName' function prints each letter of "AKHSHAN" on a new line.
 // There are two versions of the 'addTwoNumbers' function. The second version calculates and returns the sum of two numbers. The first version is overwritten.
 // The 'loginUserMessage' function logs a message saying the user has logged in, with a default username of "sam" if no other name is provided. The 'if' condition checking for 'undefined' is unnecessary because the default value is used when 'username' is not provided.
+
+
+
+
+// Function to calculate cart price with a variadic parameter (num1)
+function calculateCartPrice(val1, val2, ...num1){
+  return num1;  // Returns the remaining arguments as an array
+}
+
+console.log(calculateCartPrice(200, 400, 500, 2000));  
+// Output: [500, 2000] 
+// Explanation: The function returns the remaining arguments passed after the first two.
+
+// Creating a user object with username and prices properties
+const user = {
+username: "akhshan",
+prices: 599
+}
+
+// Function to handle an object and print out its properties
+function handleObject(anyObject){
+console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+// Logs the username and price properties of the passed object
+}
+
+handleObject(user);
+// Output: Username is akhshan and price is undefined 
+// Explanation: The function prints out the username and price of the "user" object.
+// Notice there is a typo in the object key, it should be `prices` instead of `price`.
+
+handleObject({
+username: "Sam",
+price: 399
+});
+// Output: Username is Sam and price is 399
+// Explanation: It prints out the username and price from the object passed directly.
+
+// Array of numbers
+const myNewArray = [200, 100, 400, 600];
+
+// Function to return the second value from an array
+function returnSecondValue(getArray){
+return getArray[1];  // Returns the second element of the array
+}
+
+console.log(returnSecondValue(myNewArray));
+// Output: 100 
+// Explanation: The function returns the second value of the array myNewArray.
+
+console.log(returnSecondValue([200, 400, 500, 1000]));
+// Output: 400 
+// Explanation: The function returns the second value of the new array passed as an argument.
+
+
+//  *********************** Summary ********************** //
+
+// calculateCartPrice function:- Returns the additional arguments passed after the first two as an array.
+// handleObject function:- Logs the `username` and `price` properties of an object, though there is a typo (`prices` vs `price`) in the initial user object.
+// returnSecondValue function:- Returns the second value of any given array.
