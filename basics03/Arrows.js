@@ -28,13 +28,13 @@ function chai() {
 chai();
 
 // Redefine `chai` as an anonymous function expression
-const chai = function () {
+const chai1 = function () {
   let username = "AKhshan";
   console.log(this.username); // Similar to the previous `chai`, logs `undefined` because `this` is still the global object
 };
 
 // Redefine `chai` as an arrow function
-const chai = () => {
+const chai2 = () => {
   let username = "Akhshan";
   // Arrow functions don't have their own `this`, so this logs the surrounding context's `this`
   console.log(this); // Logs the `this` from the surrounding scope, likely the global object
@@ -55,7 +55,7 @@ const addtwo = (num1, num2) => ({ username: "akhshan" }); // Returns an object w
 console.log(addtwo(3, 4)); // Logs the object: {username: "akhshan"}
 
 // `forEach` method explained: It iterates over each element in the array and applies the provided function
-myArray.forEach((element, index) => {
+ myArray.forEach((element, index) => {
   console.log(`Element: ${element}, Index: ${index}`); // Logs each element with its index
 });
 
